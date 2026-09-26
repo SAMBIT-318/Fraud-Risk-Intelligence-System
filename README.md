@@ -13,7 +13,7 @@
 |---------|--------|
 | **Fraud detection** | XGBoost + SMOTE, trained on 50,000 transactions (1:578 imbalance handled) |
 | **Explainability** | SHAP TreeExplainer — waterfall plot + top-5 risk factors per transaction |
-| **AI reports** | Anthropic Claude (optional) writes investigation reports grounded in SHAP values |
+| **AI reports** | Gemini (optional) writes investigation reports grounded in SHAP values |
 | **Bulk scoring** | Upload any CSV, score all rows, download results with risk scores |
 | **Performance dashboard** | ROC curve, PR curve, confusion matrix, feature importance |
 
