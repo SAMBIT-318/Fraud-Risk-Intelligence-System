@@ -31,12 +31,12 @@
 ## Local setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/fraud-risk-intelligence.git
+git clone https://github.com/SAMBIT-318/fraud-risk-intelligence.git
 cd fraud-risk-intelligence
 
 pip install -r requirements.txt
 
-# Optional: add Claude API key
+# Optional: add Gemini API key
 cp .streamlit/secrets.toml.example .streamlit/secrets.toml
 # Edit secrets.toml and replace the placeholder key
 
