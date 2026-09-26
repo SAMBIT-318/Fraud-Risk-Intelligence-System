@@ -67,7 +67,7 @@ with st.sidebar:
     if is_claude_available():
         st.success("🤖 Claude AI active")
     else:
-        st.info("ℹ️ Claude not configured\nAdd `ANTHROPIC_API_KEY` to `.streamlit/secrets.toml`")
+        st.info("ℹ️ Claude not configured\nAdd `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` to `.streamlit/secrets.toml`")
 
 
 # ── Tabs ──────────────────────────────────────────────────────────────────────
