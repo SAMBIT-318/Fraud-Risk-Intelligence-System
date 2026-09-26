@@ -24,7 +24,7 @@
 3. Select your fork, branch `main`, file `app.py`
 4. In **Advanced settings → Secrets**, paste:
    ```toml
-   ANTHROPIC_API_KEY = "sk-ant-your-key-here"
+   GEMINI_API_KEY = "sk-ant-your-key-here"
    ```
 5. Click **Deploy** — live in ~2 minutes
 
@@ -46,7 +46,7 @@ streamlit run app.py
 ## Docker
 
 ```bash
-# With Claude (set your key in .env or export ANTHROPIC_API_KEY=sk-ant-...)
+# With Gemini (set your key in .env or export GEMINI_API_KEY=sk-ant-...)
 docker-compose up --build
 
 # App available at http://localhost:8501
@@ -72,7 +72,7 @@ StandardScaler  →  SMOTE (train only)  →  XGBoost (200 estimators)
          ↓
 Risk score (0–100)  +  SHAP TreeExplainer  →  top-5 feature attributions
          ↓
-Anthropic Claude claude-3-5-haiku  →  structured investigation report
+Gemini Google-genai gemini 2.5 flash  →  structured investigation report
          ↓
 Streamlit (3 tabs): Analyzer | Bulk Scoring | Performance Dashboard
 ```
@@ -88,7 +88,7 @@ Streamlit (3 tabs): Analyzer | Bulk Scoring | Performance Dashboard
 
 ## Skills demonstrated
 
-`Python` · `scikit-learn` · `XGBoost` · `SMOTE / imbalanced-learn` · `SHAP` · `Anthropic Claude API` · `Streamlit` · `Docker` · `Feature Engineering` · `Predictive Modeling` · `Plotly` · `Pandas` · `NumPy`
+`Python` · `scikit-learn` · `XGBoost` · `SMOTE / imbalanced-learn` · `SHAP` · `Gemini API` · `Streamlit` · `Docker` · `Feature Engineering` · `Predictive Modeling` · `Plotly` · `Pandas` · `NumPy`
 
 ## Author
 
