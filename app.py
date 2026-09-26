@@ -67,7 +67,7 @@ with st.sidebar:
     if is_gemini_available():
         st.success("🤖 Gemini AI active")
     else:
-        st.info("ℹ️ Gemini not configured\nAdd `GEMINI_API_KEY` to `.streamlit/secrets.toml` or Streamlit Cloud Settings.")
+        st.info("ℹ️ Gemini not configured\nAdd `AQ.Ab8RN6Llv4vmx28OKjfAXO1GKAYYTh_CCARPool-T79RPMoeLA` to `.streamlit/secrets.toml` or Streamlit Cloud Settings.")
 
 
 # ── Tabs ──────────────────────────────────────────────────────────────────────
