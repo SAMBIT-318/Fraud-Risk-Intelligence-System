@@ -1,0 +1,21 @@
+yaml
+
+
+version: "3.8"
+
+services:
+  fraud-risk-app:
+    build: .
+    container_name: fraud-risk-intelligence
+    ports:
+      - "8501:8501"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+    volumes:
+      - ./data:/app/data    # mount real creditcard.csv here if you have it
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
