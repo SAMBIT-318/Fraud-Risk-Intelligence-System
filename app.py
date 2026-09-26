@@ -13,7 +13,7 @@ from src.data_loader import load_data
 from src.feature_engineering import engineer_features, FEATURE_COLS
 from src.model_pipeline import train_pipeline, predict_single, predict_batch, get_verdict
 from src.explainer import compute_shap
-from src.claude_analyst import generate_report, is_claude_available
+from src.gemini_analyst import generate_report, is_gemini_available
 
 st.set_page_config(
     page_title="Fraud Risk Intelligence System",
@@ -64,10 +64,10 @@ with st.sidebar:
     st.markdown("🔴 **86–100** — Confirmed fraud")
 
     st.divider()
-    if is_claude_available():
-        st.success("🤖 Claude AI active")
+    if is_gemini_available():
+        st.success("🤖 Gemini AI active")
     else:
-        st.info("ℹ️ Claude not configured\nAdd `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` to `.streamlit/secrets.toml`")
+        st.info("ℹ️ Gemini not configured\nAdd `GEMINI_API_KEY` to `.streamlit/secrets.toml` or Streamlit Cloud Settings.")
 
 
 # ── Tabs ──────────────────────────────────────────────────────────────────────
@@ -167,10 +167,10 @@ with tab1:
 
             st.markdown("---")
 
-            # Claude report
+            # Gemini report
             st.markdown("**AI investigation report**")
-            if st.button("📋 Generate Claude report", use_container_width=True):
-                with st.spinner("Claude is analyzing this transaction..."):
+            if st.button("📋 Generate Gemini report", use_container_width=True):
+                with st.spinner("Gemini is analyzing this transaction..."):
                     report = generate_report(amount, risk, verdict, proba, top5)
                 st.markdown(f'<div class="report-box">{report}</div>', unsafe_allow_html=True)
         else:
