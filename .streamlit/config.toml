@@ -1,0 +1,15 @@
+toml
+
+
+[theme]
+primaryColor       = "#0057e6"
+backgroundColor    = "#ffffff"
+secondaryBackgroundColor = "#f8f9fa"
+textColor          = "#1e1c1a"
+
+[server]
+maxUploadSize = 50
+headless      = true
+
+[browser]
+gatherUsageStats = false
